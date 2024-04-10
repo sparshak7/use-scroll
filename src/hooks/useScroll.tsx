@@ -6,7 +6,7 @@ type ScrollProps = {
 };
 
 const useScroll = () => {
-  const scrollToTop = ({ breakpoint = 250 }: ScrollProps) => {
+  const scrollToTop = ({ breakpoint }: ScrollProps) => {
     useEffect(() => {
       if (window.scrollY > breakpoint) {
         window.scrollTo(0, 0);
