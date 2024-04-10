@@ -1,12 +1,8 @@
 import * as React from "react";
 import { useEffect } from "react";
 
-type ScrollProps = {
-  breakpoint: number;
-};
-
 const useScroll = () => {
-  const scrollToTop = ({ breakpoint }: ScrollProps) => {
+  const scrollToTop = (breakpoint = 250) => {
     useEffect(() => {
       if (window.scrollY > breakpoint) {
         window.scrollTo(0, 0);
